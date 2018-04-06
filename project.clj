@@ -7,7 +7,8 @@
                  [ring/ring-defaults "0.2.1"]
                  [cheshire "5.8.0"]
                  [ring/ring-json "0.4.0"]
-                 [ring/ring-jetty-adapter "1.6.3"]]
+                 [ring/ring-jetty-adapter "1.6.3"]
+                 [oksql "1.2.1"]]
   :main befree-api.core
   :plugins [[lein-ring "0.9.7"]]
   :ring {:handler befree-api.handler/app}

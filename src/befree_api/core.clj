@@ -3,6 +3,11 @@
               [ring.adapter.jetty :as ring])
     (:gen-class))
 
+(defn start
+    [port app]
+    (ring/run-jetty app {:port port :join? false}))
+        
 (defn -main
     [& args]
-    (ring/run-jetty #'api-handlers/app {:port (or (System/getenv "PORT") 3000) :join? false}))
+    (let [port (or (System/getenv "PORT") 3000)]
+        (start port #'api-handlers/app)))
