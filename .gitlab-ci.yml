@@ -1,14 +1,7 @@
+image: lein-2.8.1-alpine
+
 variables:
   BEFREE_DATABASE: "jdbc:postgresql://localhost:5432/befree?user=postgres&password=postgres"
-
-before_script:
-  - apt-get update -y
-  - apt-get install default-jre postgresql-client -y
-  - wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
-  - chmod a+x lein
-  - export LEIN_ROOT=1
-  - PATH=$PATH:.
-  - lein deps
 
 test:
   stage: test
