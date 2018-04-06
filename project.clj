@@ -8,7 +8,8 @@
                  [cheshire "5.8.0"]
                  [ring/ring-json "0.4.0"]
                  [ring/ring-jetty-adapter "1.6.3"]
-                 [oksql "1.2.1"]]
+                 [oksql "1.2.1"]
+                 [crypto-password "0.2.0"]]
   :main befree-api.core
   :plugins [[lein-ring "0.9.7"]]
   :ring {:handler befree-api.handler/app}
