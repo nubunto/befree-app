@@ -1,9 +1,7 @@
 (ns befree-api.models.users
     (:refer-clojure :exclude [update])
     (:require [oksql.core :as oksql]
-              [befree-api.models.sql :refer [db-config]]))
-
-(def db {:connection-uri "postgres://localhost:5432/befree"})
+              [befree-api.models.sql :refer [db]]))
 
 (def query (partial oksql/query db))
 
