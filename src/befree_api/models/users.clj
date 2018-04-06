@@ -16,7 +16,7 @@
 
 (defn create
     [m]
-    (let [m (update m :password encrypt)]
+    (let [m (clojure.core/update m :password encrypt)]
       (oksql/insert db :users m)))
 
 (defn update
