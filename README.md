@@ -1,6 +1,7 @@
 # befree-api
+[![pipeline status](https://gitlab.com/befree-app/befree-api/badges/master/pipeline.svg)](https://gitlab.com/befree-app/befree-api/commits/master)
 
-FIXME
+TODO: write a readme
 
 ## Prerequisites
 
