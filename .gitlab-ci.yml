@@ -1,4 +1,4 @@
-image: lein-2.8.1
+image: clojure:lein-2.8.1
 
 variables:
   BEFREE_DATABASE: "jdbc:postgresql://localhost:5432/befree?user=postgres&password=postgres"
