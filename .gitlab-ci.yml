@@ -9,7 +9,6 @@ before_script:
   - export LEIN_ROOT=1
   - PATH=$PATH:.
   - lein deps
-  - lein migratus migrate
 
 test:
   stage: test
