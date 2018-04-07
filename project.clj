@@ -7,9 +7,10 @@
                  [ring/ring-defaults "0.2.1"]
                  [cheshire "5.8.0"]
                  [ring/ring-json "0.4.0"]
-                 [ring/ring-jetty-adapter "1.6.3"]
+                 [aleph "0.4.4"]
                  [oksql "1.2.1"]
-                 [crypto-password "0.2.0"]]
+                 [crypto-password "0.2.0"]
+                 [hikari-cp "1.8.3"]]
   :main befree-api.core
   :plugins [[lein-ring "0.9.7"]]
   :ring {:handler befree-api.handler/app}
