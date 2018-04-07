@@ -19,4 +19,4 @@
    :port-number        5432
    :register-mbeans    false})
 
-(def datasource {:datasource (make-datasource datasource-options)})
+(def ^:dynamic *db* {:datasource (make-datasource datasource-options)})
