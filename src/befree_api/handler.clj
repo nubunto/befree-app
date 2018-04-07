@@ -2,7 +2,6 @@
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [befree-api.api :refer [api-routes]]
-            [ring.adapter.jetty :as ring]
             [ring.middleware.json :refer [wrap-json-response]]))
 
 (defroutes app-routes

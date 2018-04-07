@@ -1,11 +1,13 @@
 (ns befree-api.core
     (:require [befree-api.handler :as api-handlers]
-              [ring.adapter.jetty :as ring])
+              [aleph.http :as http])
     (:gen-class))
 
 (defn start
     [port app]
-    (ring/run-jetty app {:port port :join? false}))
+    (do
+        (println "starting server on port" port)
+        (http/start-server app {:port port})))
         
 (defn -main
     [& args]
