@@ -1,10 +1,10 @@
 (ns befree-api.models.users
     (:refer-clojure :exclude [update])
     (:require [oksql.core :as oksql]
-              [befree-api.models.sql :refer [db]]
+              [befree-api.models.sql :refer [datasource]]
               [crypto.password.bcrypt :refer [encrypt]]))
 
-(def query (partial oksql/query db))
+(def query (partial oksql/query datasource))
 
 (defn all
     []
@@ -17,12 +17,12 @@
 (defn create
     [m]
     (let [m (clojure.core/update m :password encrypt)]
-      (oksql/insert db :users m)))
+      (oksql/insert datasource :users m)))
 
 (defn update
     [id m]
-    (oksql/update db :users m :users/where {:id id}))
+    (oksql/update datasource :users m :users/where {:id id}))
 
 (defn delete
     [id]
-    (oksql/delete db :users :users/where {:id id}))
+    (oksql/delete datasource :users :users/where {:id id}))
