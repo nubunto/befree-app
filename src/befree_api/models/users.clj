@@ -1,4 +1,5 @@
 (ns befree-api.models.users
+  (:refer-clojure :exclude [update])
   (:require [oksql.core :as oksql]
             [befree-api.models.sql :refer [*db*]]
             [crypto.password.bcrypt :refer [encrypt]]))
@@ -13,7 +14,7 @@
 
 (defn create
   [m]
-  (let [m (update m :password encrypt)]
+  (let [m (clojure.core/update m :password encrypt)]
     (oksql/insert *db* :users m)))
 
 (defn update
